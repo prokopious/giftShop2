@@ -5,6 +5,10 @@
       href="https://fonts.googleapis.com/css2?family=Aladin&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.snipcart.com/themes/v3.0.31/default/snipcart.css"
+    />
     <style>
       body {
         font-family: "Aladin", cursive;
@@ -36,7 +40,7 @@
             rgba(0, 0, 0, 0.5),
             rgba(0, 0, 0, 0.5)
           ),
-          url("https://images.pexels.com/photos/606506/pexels-photo-606506.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+          url("https://images.pexels.com/photos/277253/pexels-photo-277253.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
         height: 50%;
         background-position: center;
         background-repeat: no-repeat;
@@ -50,12 +54,13 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        color: #ff9c5b;
+        color: #f89655;
         text-shadow: 5px 10px 13px black;
         letter-spacing: 3px;
       }
 
       .button {
+        font-family: "Aladin", cursive;
       }
 
       .hero-text button:hover {
@@ -136,11 +141,50 @@
         width: 100%;
       }
 
+      .snipcart-add-item {
+        background-color: #f89655;
+        border: rgba(0, 0, 0, 0);
+        padding: 5px 15px;
+        margin-bottom: 15px;
+        font-family: "Aladin", cursive;
+        margin-top: 0;
+      }
+
+      .about {
+        width: 180px;
+        padding: 10px 20px;
+        background-color: rgba(233, 233, 233, 0.513);
+        color: rgb(226, 226, 226);
+        margin-bottom: 50px;
+        font-family: "Aladin", cursive;
+        font-size: 18px;
+        align-items: center;
+
+        border-radius: 5px;
+        background: linear-gradient(
+          -45deg,
+          rgba(0, 0, 0, 0.22),
+          rgba(255, 255, 255, 0.25)
+        );
+        box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+          -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+        background: linear-gradient(
+          -45deg,
+          rgba(0, 0, 0, 0.22),
+          rgba(255, 255, 255, 0.418)
+        );
+      }
+
       /* Responsive layout - makes a two column-layout instead of four columns */
       @media screen and (max-width: 800px) {
         .column {
           flex: 50%;
           max-width: 50%;
+        }
+        .about {
+          width: 100px;
+          margin-bottom: 0px;
+          padding: 5px 10px;
         }
       }
 
@@ -153,7 +197,7 @@
       }
 
       .info {
-        border: 1px solid #ff9c5b;
+        border: 1px solid #f89655;
         padding: 0px;
         margin-bottom: 5px;
         background-color: #28a54d00;
@@ -163,6 +207,7 @@
         padding-top: 10px;
         padding-left: 15px;
         color: #b8b8b8;
+        margin-bottom: 0;
       }
 
       .box {
@@ -173,13 +218,19 @@
       p {
         padding-top: 10px;
         padding-left: 15px;
+        margin: 0;
 
         color: #9e9d9d;
+      }
+
+      .price {
+        margin-top: 0;
       }
 
       img {
         padding: 15px;
         padding-top: 10px;
+        padding-bottom: 0;
       }
     </style>
   </head>
@@ -190,15 +241,15 @@
           style="
             margin-bottom: 0;
             padding-bottom: 0;
-            font-size: calc(1.9em + 0.7vw);
+            font-size: calc(2.4em + 0.7vw);
           "
         >
-          Gift Shop
+          Bukhara
         </h1>
         <div
           style="
             text-transform: uppercase;
-            font-size: calc(0.4em + 0.4vw);
+            font-size: 16px;
             padding-bottom: 20px;
             color: rgb(255, 255, 255);
             font-family: Baskerville;
@@ -206,33 +257,11 @@
             padding-top: 10px;
           "
         >
-          washington, dc
+          Incense and Spices
         </div>
         <div>
-          <button
-            style="
-              font-size: calc(0.4em + 0.4vw);
-              padding-bottom: 10px;
-              color: rgb(0, 0, 0);
-              margin-top: 0;
-              padding-top: 10px;
-              width: 100px;
-            "
-          >
-            ABOUT
-          </button>
-          <button
-            style="
-              font-size: calc(0.4em + 0.4vw);
-              padding-bottom: 10px;
-              color: rgb(0, 0, 0);
-              margin-top: 0;
-              padding-top: 10px;
-              width: 100px;
-            "
-          >
-            CONTACT
-          </button>
+          <button class="about">ABOUT</button>
+          <button class="about">CONTACT</button>
         </div>
       </div>
     </div>
@@ -240,7 +269,7 @@
     <h3
       style="
         text-align: center;
-        background-color: #ff9c5b;
+        background-color: #f89655;
         padding: 1em;
         margin: 6px;
       "
@@ -250,93 +279,82 @@
     <div class="row">
       <div class="column">
         <div class="info">
-          <h4>White Russian</h4>
+          <h4>Frankincense</h4>
+          <p class="price">$50</p>
+          <p>This sacred resin was first mentioned by Herodotus.</p>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Weihrauch.jpg/800px-Weihrauch.jpg"
+          />
           <p>
-            During its heyday, this sativa-leaning hybrid was considered the
-            strongest in the world.
+            <button
+              class="snipcart-add-item"
+              data-item-id="frankincense"
+              data-item-price="50.00"
+              data-item-url="/"
+              data-item-description="frankincense"
+              data-item-image="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Weihrauch.jpg/800px-Weihrauch.jpg"
+              data-item-name="frankincense"
+            >
+              Add to cart
+            </button>
           </p>
-          <img
-            src="https://images.pexels.com/photos/4460911/pexels-photo-4460911.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-          />
-        </div>
-        <div class="info">
-          <h4>Irish Cream</h4>
-          <p>Irish cream is a hybrid with pleasant floral tonalities.</p>
-          <img
-            src="https://images.pexels.com/photos/4460911/pexels-photo-4460911.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-          />
-        </div>
-        <div class="info">
-          <img
-            src="https://images.pexels.com/photos/6692278/pexels-photo-6692278.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-          />
-        </div>
-        <div class="info">
-          <img
-            src="https://images.pexels.com/photos/3536257/pexels-photo-3536257.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-          />
-        </div>
-        <div class="info">
-          <img
-            src="https://images.pexels.com/photos/6692278/pexels-photo-6692278.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-          />
-        </div>
-        <div class="info">
-          <img
-            src="https://images.pexels.com/photos/3536257/pexels-photo-3536257.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-          />
         </div>
       </div>
       <div class="column">
         <div class="info">
-          <h4>Super Sour Diesel</h4>
-          <p>
-            This energizing sativa is perfect for the creative mind. It is best
-            in the morning, yet suitable for evenings use too.
-          </p>
-          <img
-            src="https://images.pexels.com/photos/6692278/pexels-photo-6692278.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-          />
-        </div>
-        <div class="info">
-          <img
-            src="https://images.pexels.com/photos/3536257/pexels-photo-3536257.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-          />
-        </div>
-        <div class="info">
-          <img
-            src="https://images.pexels.com/photos/6692278/pexels-photo-6692278.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-          />
-        </div>
-        <div class="info">
-          <img
-            src="https://images.pexels.com/photos/3536257/pexels-photo-3536257.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-          />
-        </div>
+          <h4>Cardamom</h4>
+          <p class="price">$20</p>
 
-        <div class="info">
-          <h4>Northern Lights</h4>
-          <p>This famous indica is reminiscent of the aurora borealis.</p>
+          <p>This ancient spice pairs well with citrus.</p>
           <img
-            src="https://images.pexels.com/photos/6692278/pexels-photo-6692278.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Elettaria_cardamomum_capsules.jpg/1024px-Elettaria_cardamomum_capsules.jpg"
           />
+          <p>
+            <button
+              class="snipcart-add-item"
+              data-item-id="cardamom"
+              data-item-price="20.00"
+              data-item-url="/"
+              data-item-description="cardamom."
+              data-item-image="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Elettaria_cardamomum_capsules.jpg/1024px-Elettaria_cardamomum_capsules.jpg"
+              data-item-name="cardamom"
+            >
+              Add to cart
+            </button>
+          </p>
         </div>
         <div class="info">
+          <h4>Saffron</h4>
+          <p class="price">$44</p>
+
+          <p>The rarest of spices.</p>
           <img
-            src="https://images.pexels.com/photos/3536257/pexels-photo-3536257.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Saffron_salonik.jpg/1024px-Saffron_salonik.jpg"
           />
-        </div>
-        <div class="info">
-          <img
-            src="https://images.pexels.com/photos/6692278/pexels-photo-6692278.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-          />
-        </div>
-        <div class="info">
-          <img
-            src="https://images.pexels.com/photos/3536257/pexels-photo-3536257.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-          />
+          <p>
+            <button
+              class="snipcart-add-item"
+              data-item-id="saffron"
+              data-item-price="44.00"
+              data-item-url="/"
+              data-item-description="saffron"
+              data-item-image="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Saffron_salonik.jpg/1024px-Saffron_salonik.jpg"
+              data-item-name="saffron"
+            >
+              Add to cart
+            </button>
+          </p>
         </div>
       </div>
     </div>
+    <script
+      async
+      src="https://cdn.snipcart.com/themes/v3.0.31/default/snipcart.js"
+    ></script>
+    <div
+      hidden
+      id="snipcart"
+      data-api-key="YjllMDMzYjEtMDc5NS00ZDExLThlYWMtOWNjNDVjNmFmMDZlNjM3NDY1MjEyMzM2NjA1NjMz"
+    ></div>
   </body>
 </html>
