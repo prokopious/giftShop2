@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aladin&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Aladin", cursive;
+      }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        margin: 0;
+        padding: 0;
+      }
+
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-size: calc(0.9em + 0.7vw);
+        background-color: rgb(0, 0, 0);
+      }
+
+      .hero-image {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url("https://images.pexels.com/photos/606506/pexels-photo-606506.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+        height: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      }
+
+      .hero-text {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #ff9c5b;
+        text-shadow: 5px 10px 13px black;
+        letter-spacing: 3px;
+      }
+
+      .button {
+      }
+
+      .hero-text button:hover {
+        background-color: rgba(255, 255, 255, 0);
+        color: white;
+      }
+      .container {
+        margin: 0 auto;
+      }
+
+      .photos {
+        display: flex;
+        background-color: #000;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: stretch;
+        padding: 0;
+      }
+
+      .photos img {
+        display: block;
+        float: left;
+        flex: 0 0 auto;
+        background-color: #fff;
+      }
+
+      @media screen and (min-width: 1024px) {
+        .photos img {
+          width: calc(100% / 3);
+          height: calc(100% / 3);
+        }
+      }
+
+      @media screen and (min-width: 769px) and (max-width: 1024px) {
+        .photos img {
+          width: calc(100% / 2);
+          height: calc(100% / 2);
+        }
+      }
+
+      @media screen and (min-width: 481px) and (max-width: 768px) {
+        .photos img {
+          width: calc(100% / 1);
+          height: calc(100% / 1);
+        }
+      }
+
+      @media screen and (min-width: 321px) and (max-width: 480px) {
+        .photos img {
+          width: calc(100% / 1);
+          height: calc(100% / 1);
+        }
+      }
+
+      @media screen and (max-width: 320px) {
+        .photos img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 4px;
+      }
+
+      /* Create four equal columns that sits next to each other */
+      .column {
+        flex: 50%;
+        max-width: 50%;
+        padding: 0 3px;
+      }
+
+      .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+        width: 100%;
+      }
+
+      /* Responsive layout - makes a two column-layout instead of four columns */
+      @media screen and (max-width: 800px) {
+        .column {
+          flex: 50%;
+          max-width: 50%;
+        }
+      }
+
+      /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 600px) {
+        .column {
+          flex: 100%;
+          max-width: 100%;
+        }
+      }
+
+      .info {
+        border: 1px solid #ff9c5b;
+        padding: 0px;
+        margin-bottom: 5px;
+        background-color: #28a54d00;
+      }
+
+      h4 {
+        padding-top: 10px;
+        padding-left: 15px;
+        color: #b8b8b8;
+      }
+
+      .box {
+        display: flex;
+        flex-direction: column;
+      }
+
+      p {
+        padding-top: 10px;
+        padding-left: 15px;
+
+        color: #9e9d9d;
+      }
+
+      img {
+        padding: 15px;
+        padding-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero-image" style="margin: 6px">
+      <div class="hero-text">
+        <h1
+          style="
+            margin-bottom: 0;
+            padding-bottom: 0;
+            font-size: calc(1.9em + 0.7vw);
+          "
+        >
+          Gift Shop
+        </h1>
+        <div
+          style="
+            text-transform: uppercase;
+            font-size: calc(0.4em + 0.4vw);
+            padding-bottom: 20px;
+            color: rgb(255, 255, 255);
+            font-family: Baskerville;
+            margin-top: 0;
+            padding-top: 10px;
+          "
+        >
+          washington, dc
+        </div>
+        <div>
+          <button
+            style="
+              font-size: calc(0.4em + 0.4vw);
+              padding-bottom: 10px;
+              color: rgb(0, 0, 0);
+              margin-top: 0;
+              padding-top: 10px;
+              width: 100px;
+            "
+          >
+            ABOUT
+          </button>
+          <button
+            style="
+              font-size: calc(0.4em + 0.4vw);
+              padding-bottom: 10px;
+              color: rgb(0, 0, 0);
+              margin-top: 0;
+              padding-top: 10px;
+              width: 100px;
+            "
+          >
+            CONTACT
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <h3
+      style="
+        text-align: center;
+        background-color: #ff9c5b;
+        padding: 1em;
+        margin: 6px;
+      "
+    >
+      All Items
+    </h3>
+    <div class="row">
+      <div class="column">
+        <div class="info">
+          <h4>White Russian</h4>
+          <p>
+            During its heyday, this sativa-leaning hybrid was considered the
+            strongest in the world.
+          </p>
+          <img
+            src="https://images.pexels.com/photos/4460911/pexels-photo-4460911.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+          />
+        </div>
+        <div class="info">
+          <h4>Irish Cream</h4>
+          <p>Irish cream is a hybrid with pleasant floral tonalities.</p>
+          <img
+            src="https://images.pexels.com/photos/4460911/pexels-photo-4460911.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+          />
+        </div>
+        <div class="info">
+          <img
+            src="https://images.pexels.com/photos/6692278/pexels-photo-6692278.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+          />
+        </div>
+        <div class="info">
+          <img
+            src="https://images.pexels.com/photos/3536257/pexels-photo-3536257.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+          />
+        </div>
+        <div class="info">
+          <img
+            src="https://images.pexels.com/photos/6692278/pexels-photo-6692278.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+          />
+        </div>
+        <div class="info">
+          <img
+            src="https://images.pexels.com/photos/3536257/pexels-photo-3536257.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+          />
+        </div>
+      </div>
+      <div class="column">
+        <div class="info">
+          <h4>Super Sour Diesel</h4>
+          <p>
+            This energizing sativa is perfect for the creative mind. It is best
+            in the morning, yet suitable for evenings use too.
+          </p>
+          <img
+            src="https://images.pexels.com/photos/6692278/pexels-photo-6692278.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+          />
+        </div>
+        <div class="info">
+          <img
+            src="https://images.pexels.com/photos/3536257/pexels-photo-3536257.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+          />
+        </div>
+        <div class="info">
+          <img
+            src="https://images.pexels.com/photos/6692278/pexels-photo-6692278.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+          />
+        </div>
+        <div class="info">
+          <img
+            src="https://images.pexels.com/photos/3536257/pexels-photo-3536257.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+          />
+        </div>
+
+        <div class="info">
+          <h4>Northern Lights</h4>
+          <p>This famous indica is reminiscent of the aurora borealis.</p>
+          <img
+            src="https://images.pexels.com/photos/6692278/pexels-photo-6692278.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+          />
+        </div>
+        <div class="info">
+          <img
+            src="https://images.pexels.com/photos/3536257/pexels-photo-3536257.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+          />
+        </div>
+        <div class="info">
+          <img
+            src="https://images.pexels.com/photos/6692278/pexels-photo-6692278.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+          />
+        </div>
+        <div class="info">
+          <img
+            src="https://images.pexels.com/photos/3536257/pexels-photo-3536257.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
